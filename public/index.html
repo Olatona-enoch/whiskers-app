@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="font-poppins pb-44 px-12">
+<body class="font-poppins pb-44 px-5">
     <div class="flex justify-center items-center flex-col gap-22 ">
         <header class="flex justify-center items-center gap-2 mt-12">
             <img class="w-10 h-10" src="images/icons8-cat-64.png" alt="">
@@ -80,6 +80,7 @@
                         <legend class="fieldset-legend text-lg text-[#586e73]"> Enter maximum Length of Random Fact</legend>
                         <input type="number" class="input w-full h-14 rounded-xl focus:border-none" placeholder="maximum length e.g 30"  />
                     </fieldset>
+                    <div class="self-start text-sm text-red-500 errorMessage "> U must enter a value </div>
         
         
                     <button type="submit" class="btn mt-5 rounded-2xl w-full  bg-custom-orange text-gray-900 self-center hover:bg-orange-400 transition ease-linear duration-300">
@@ -92,7 +93,9 @@
                     <h1 class=" text-3xl text-[#586e73] text-center mb-10"> Did You Know ?</h1>
                     <p class="text-2xl text-customText text-center px-20"> <span class="text-custom-orange">Random fact</span> : Cats can jump up to 7 times their tail length</p>
                 </section>
-        
+
+                <p class="failedMessage hidden text-red-500 text-xl text-center mt-6">${error.message}</p>
+               
                 <div class="modal-action">
                     <form method="dialog" class="">
                         <button class="btn bg-[#586e73] rounded-2xl">Close</button>
@@ -148,7 +151,9 @@
                         <span class="loading loading-bars loading-md hidden text-gray-900 "></span>
                         Generate
                     </button>        
-                </form>               
+                </form>
+                
+
                 <section class="pb-40 display hidden">
                     <h1 class=" text-3xl text-[#586e73] text-center mb-10"> Did You Know ?</h1>
                     <p class="text-2xl text-customText text-center px-20"> <span class="text-custom-orange">Random fact</span> : Cats can jump up to 7 times their tail length</p>
@@ -197,7 +202,7 @@
             <button type="submit" class="btn mt-5 rounded-2xl w-100  bg-custom-orange text-gray-900 self-center hover:bg-orange-400 transition ease-linear duration-300">Generate</button>
 
         </form>
-        
+      
         <section class="pb-40 flex flex-col justify-center items-center" id="display">
             <!-- <h1 class=" text-3xl text-[#586e73] text-center mb-10"> Did You Know ? 
             <p class="text-2xl text-customText text-center px-20"> <span class="text-custom-orange">Random fact</span> : Cats can jump up to 7 times their tail length</p>
