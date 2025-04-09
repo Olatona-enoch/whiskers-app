@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll(".card");
-const formfields = document.querySelectorAll(".inputForm"); // assuming formfields are in same order as cards
+const formfields = document.querySelectorAll(".formfield"); // assuming formfields are in same order as cards
 const displaySection = document.getElementById("display");
 const listModal = document.getElementById("my_modal_2");
 const breedModal = document.getElementById("my_modal_3");
@@ -48,13 +48,6 @@ async function getRandom(event) {
     const loading = randomFacts_form.querySelector(".loading");
     let length = randomFacts_form.querySelector("input").value;
     const errorMessage = randomFacts_form.querySelector(".errorMessage");
-    // if (length == "") {
-    //     display.innerHTML = "error error";
-    //     errorMessage.classList.remove("hidden");
-    //     return;
-    // }else{
-    //     errorMessage.classList.add("hidden");
-    // }    
     try {
 
         event.preventDefault();
@@ -88,7 +81,7 @@ async function getRandom(event) {
 }
 
 async function getList(event) {
-    displaySection.innerHTML = "";
+    // displaySection.innerHTML = "";
     const display = list_of_facts_form.parentElement.querySelector(".display");
 
     try {

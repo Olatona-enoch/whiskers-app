@@ -759,6 +759,9 @@
     color: var(--color-base-content);
     font-weight: 600;
   }
+  .mb-0 {
+    margin-bottom: calc(var(--spacing) * 0);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
