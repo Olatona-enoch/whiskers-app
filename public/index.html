@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#1C1C1E]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="font-poppins pb-44 ">
+    <div class="flex justify-center items-center flex-col gap-22 ">
+        <header class="flex justify-center items-center gap-2 mt-12">
+            <img class="w-10 h-10" src="images/icons8-cat-64.png" alt="">
+            <h1 class="text-3xl text-customText">Whiskers</h1>
+        </header>
+        
+        <div class="flex flex-wrap justify-center gap-10">
+            <!-- --------Get a Random Fact--------- -->
+            <div class="card card-border border-gray-400 rounded-2xl  w-96">
+                <div class="card-body">
+                  <h2 class="card-title text-base text-[#586e73] ">Get a Random fact</h2>
+                  <p class="text-customText text-lg">Generate a random cat fact based on your choice maximum length. </p>
+                  <div class="card-actions justify-end">
+                    <button class="btn bg-custom-orange text-gray-900 text-base rounded-xl p-6 hover:bg-rose-300 transition ease-linear duration-300">Get Random Fact</button>
+                  </div>
+                </div>
+            </div>
+            <!-- -----------Get a List of Facts-------- -->
+            <div class="card card-border border-gray-400 rounded-2xl  w-96">
+                <div class="card-body">
+                  <h2 class="card-title text-base text-[#586e73] ">Get a List of Cat facts</h2>
+                  <p class="text-customText text-lg">Get a List of Cat Facts based on your choice Limit. </p>
+                  <div class="card-actions justify-end">
+                    <button class="btn bg-custom-orange text-gray-900 text-base rounded-xl p-6  hover:bg-rose-300 transition ease-linear duration-300">Get a List of Facts</button>
+                  </div>
+                </div>
+            </div>
+            <!-- -----------Get Cat Breeds------- -->
+            <div class="card card-border border-gray-400 rounded-2xl  w-96">
+                <div class="card-body">
+                  <h2 class="card-title text-base text-[#586e73] "> Cat Breeds</h2>
+                  <p class="text-customText text-lg">Generate as much information about cat breeds as you want. </p>
+                  <div class="card-actions justify-end">
+                    <button class="btn bg-custom-orange text-gray-900 text-base rounded-xl p-6 mt-4  hover:bg-rose-300 transition ease-linear duration-300"> Cat Breeds</button>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ---------Input Bar-------- -->
+        <!-- <form action="">
+            <label for=""></label>
+            <input class="w-200 border h-20" type="text">
+        </form> -->
+        <form class=" flex-col justify-center items-center hidden" id="randomFacts">
+            <h1 class="text-3xl text-center mb-5 ">Generate Random Fact</h1>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-lg text-[#586e73]"> Enter maximum Length of Random Fact</legend>
+                <input type="number" class="input w-[80%] h-14 rounded-xl focus:border-none" placeholder="maximum length e.g 30" />
+            </fieldset>
+
+
+            <button type="submit" class="btn mt-5 rounded-2xl w-100  bg-custom-orange text-gray-900 self-center hover:bg-orange-400 transition ease-linear duration-300">Generate</button>
+        </form>
+        
+        <!-- <form class="flex flex-col justify-center items-center">
+            <label class="text-2xl mb-5">Maximum Length of Random Fact</label>
+            <input type="number" class="input w-200 h-14 rounded-xl focus:border-none" placeholder="maximum length e.g 20" />
+            <label class="text-2xl mb-5">Maximum Length of Random Fact</label>
+            <input type="number" class="input w-200 h-14 rounded-xl focus:border-none" placeholder="maximum length e.g 20" />
+
+            <button class="btn mt-5 rounded-2xl w-100  bg-custom-orange text-gray-900 self-center hover:bg-blue-300 transition ease-linear duration-300">Generate</button>
+        </form> -->
+        <form class=" flex-col justify-center items-center hidden" id="list_of_facts">
+            <h1 class="text-3xl text-center mb-5">Generate a List of Facts</h1>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend text-lg text-[#586e73]">Enter maximum length of facts</legend>
+                <input type="number" class="input w-{80%} h-14 rounded-xl focus:border-none" placeholder="maximum length e.g 30" />
+    
+                <legend class="fieldset-legend text-lg text-[#586e73]"> Enter the limit on results returned</legend>
+                <input type="number" class="input w-200 h-14 rounded-xl focus:border-none" placeholder="limit e.g 30" />  
+            </fieldset>
+
+            <button type="submit" class="btn mt-5 rounded-2xl w-100  bg-custom-orange text-gray-900 self-center hover:bg-orange-400 transition ease-linear duration-300">Generate</button>
+
+        </form>
+
+        <form class="flex-col justify-center items-center hidden" id="catBreeds">
+            <h1 class="text-3xl text-center mb-5">Cat Breeds</h1>
+            <fieldset class="fieldset">    
+                <legend class="fieldset-legend text-lg text-[#586e73]"> Enter the limit on results returned</legend>
+                <input type="number" class="input w-2xl h-14 rounded-xl focus:border-none" placeholder="limit e.g 30" />  
+            </fieldset>
+
+            <button type="submit" class="btn mt-5 rounded-2xl w-100  bg-custom-orange text-gray-900 self-center hover:bg-orange-400 transition ease-linear duration-300">Generate</button>
+
+        </form>
+        
+        <section class="pb-40" id="display">
+            <h1 class=" text-3xl text-[#586e73] text-center mb-10"> Did You Know ?</h1>
+            <p class="text-2xl text-customText text-center px-20"> <span class="text-custom-orange">Random fact</span> : Cats can jump up to 7 times their tail length</p>
+        </section>
+
+        <footer></footer>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
